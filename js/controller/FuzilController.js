@@ -1,7 +1,8 @@
 const fuzil = new Fuzil()
 
 const atiraFuzil = (() => {
-  fuzil.atirar()
+  if (fuzil.temBala())
+    fuzil.atirar()
   document.querySelector('.qtdBalasFuzil').innerHTML = fuzil.bala
   document.querySelector('.balaMaxFuzil').innerHTML = fuzil.balaMax
   if (fuzil.bala == 0) {
@@ -12,6 +13,7 @@ const atiraFuzil = (() => {
 
 const regarregaFuzil = (() => {
   document.querySelector('img').classList.remove('hideFuzil')
+  if (fuzil.bala < fuzil.balaMax)
   fuzil.recarregar()
   document.querySelector('.qtdBalasFuzil').innerHTML = fuzil.bala
   document.querySelector('.balaMaxFuzil').innerHTML = fuzil.balaMax

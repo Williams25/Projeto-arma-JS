@@ -1,7 +1,8 @@
 const revolver = new Revolver()
 
 const atiraRevolver = (() => {
-  revolver.atirar()
+  if (revolver.temBala())
+    revolver.atirar()
   document.querySelector('.qtdBalasRevolver').innerHTML = revolver.bala
   document.querySelector('.balaMaxRevolver').innerHTML = revolver.balaMax
   if (revolver.bala === 0) {
@@ -12,7 +13,8 @@ const atiraRevolver = (() => {
 
 const regarregaRevolver = (() => {
   document.querySelector('.revolverabug').classList.remove('hideRevolver')
-  revolver.recarregar()
+  if (revolver.bala < revolver.balaMax)
+    revolver.recarregar()
   document.querySelector('.qtdBalasRevolver').innerHTML = revolver.bala
   document.querySelector('.balaMaxRevolver').innerHTML = revolver.balaMax
   if (revolver.bala === revolver.balaMax) {

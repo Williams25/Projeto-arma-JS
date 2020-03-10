@@ -6,25 +6,23 @@ class Arma {
   }
 
   atirar() {
-    if (this.bala > 0) {
-      this.bala -= 1
-    }
+    this.bala -= 1
   }
 
   recarregar() {
-    if (this.bala < this.balaMax) {
-      return this.bala += 1
-    } else {
-      return `A arma esta carregada com ${this.bala}`
-    }
+    return this.bala += 1
   }
 
   regarregarFull() {
-    if (this.bala === this.balaMax) {
-      return `A arma esta carregada com ${this.bala}`
-    } else {
-      return this.bala = this.balaMax
-    }
+    return this.bala = this.balaMax
+  }
+
+  temBala() {
+    return this.bala > 0
+  }
+
+  estaTotalmenteCarregado() {
+    return this.bala === this.balaMax
   }
 
   toString() {

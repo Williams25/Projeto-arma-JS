@@ -1,7 +1,8 @@
 const bazuca = new Bazuca()
 
 const atiraBazuca = (() => {
-  bazuca.atirar()
+  if (bazuca.temBala())
+    bazuca.atirar()
   document.querySelector('.qtdBalasBazuca').innerHTML = bazuca.bala
   document.querySelector('.balaMaxBazuca').innerHTML = bazuca.balaMax
   if (bazuca.bala === 0) {
@@ -12,7 +13,8 @@ const atiraBazuca = (() => {
 
 const regarregaBazuca = (() => {
   document.querySelector('.bazucabug').classList.remove('hideBazuca')
-  bazuca.recarregar()
+  if (bazuca.bala < fuzil.balaMax)
+    bazuca.recarregar()
   document.querySelector('.qtdBalasBazuca').innerHTML = bazuca.bala
   document.querySelector('.balaMaxBazuca').innerHTML = bazuca.balaMax
   if (bazuca.bala === bazuca.balaMax) {
