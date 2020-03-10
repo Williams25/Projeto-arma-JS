@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+.img , .imgrevolver, .imgbazuca{
+    width: 100%;
+}
+.img img {
+    width: 25%;
+    rotate: 40deg;
+}
+.imgrevolver img{
+    width: 20%;
+}
+.imgbazuca img {
+    width: 25%;
+    rotate: 44deg;
+}
+.hideFuzil{
+    rotate: 10deg !important;
+}
+.hideRevolver{
+    rotate: -8deg !important;
+}
+.hideBazuca {
+    rotate: -10deg !important;
+}

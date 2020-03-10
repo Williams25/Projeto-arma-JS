@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-lg">
+        <div class="img">
+          <img src="img/icons8-assault-rifle-100.png" alt="">
+        </div>
+        <button type="button" class="btn btn-danger mt-3 fuzil" onclick="atiraFuzil()">Atirar fuzil</button>
+        <br>
+        <button type="button" class="btn btn-success mt-3" onclick="regarregaFuzil()">Carregar uma bala de
+          fuzil</button>
+        <button type="button" class="btn btn-success mt-3 mb-2" onclick="regarregaFuzilFull()">Carregar todas
+          balas de fuzil</button><br>
+        Quantidades de balas: <span class="qtdBalasFuzil">3</span> <br>
+        Balas maximas: <span class="balaMaxFuzil">3</span>
+      </div>
+
+      <div class="col-lg">
+        <div class="imgrevolver">
+          <img src="img/icons8-gun-100.png" alt="" class="revolverabug">
+        </div>
+        <button type="button" class="btn btn-danger mt-4 revolver" onclick="atiraRevolver()">Atirar
+          revolver</button>
+        <button type="button" class="btn btn-success mt-3" onclick="regarregaRevolver()">Carregar uma bala de
+          revolver</button>
+        <button type="button" class="btn btn-success mt-3 mb-2" onclick="regarregaRevolverFull()">Carregar todas
+          balas de revolver</button><br>
+        Quantidades de balas: <span class="qtdBalasRevolver">7</span> <br>
+        Balas maximas: <span class="balaMaxRevolver">7</span>
+      </div>
+
+      <div class="col-lg">
+        <div class="imgbazuca">
+          <img src="img/icons8-rpg-100.png" alt="" class="bazucabug">
+        </div>
+        <button type="button" class="btn btn-danger mt-2 bazuca" onclick="atiraBazuca()">Atirar Bazuca</button>
+        <button type="button" class="btn btn-success mt-3" onclick="regarregaBazuca()">Carregar uma bala de
+          Bazuca</button>
+        <button type="button" class="btn btn-success mt-3 mb-2" onclick="regarregaBazucaFull()">Carregar todas
+          balas de Bazuca</button><br>
+        Quantidades de balas: <span class="qtdBalasBazuca">5</span> <br>
+        Balas maximas: <span class="balaMaxBazuca">5</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/model/Arma.js"></script>
+  <script src="js/model/Bazuca.js"></script>
+  <script src="js/model/Fuzil.js"></script>
+  <script src="js/model/Revolver.js"></script>
+  <script src="js/controller/manipularCss.js"></script>
+  <script src="js/controller/FuzilController.js"></script>
+  <script src="js/controller/RevolverController.js"></script>
+  <script src="js/controller/BazucaController.js"></script>
+
+</body>
+
+</html>
